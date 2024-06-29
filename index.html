@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya Calculator</title>
+    <style>
+        header{
+             display:block;
+             text-align: center;
+             font-size: 4rem;
+        }
+        .mainclc{
+            display:grid;
+            background-color: blanchedalmond;
+            grid-template-columns: 120px 120px 120px 120px;
+            grid-template-rows: 120px 120px 120px 120px 120px;
+            gap: 10px;
+            width:520px;
+        }
+        .keys{
+            background-color: azure;
+            font-size: 3rem;
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            align-content: center;
+            border-radius: 10%;
+        }
+        .display{
+            font-size:4rem;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            text-align:end;
+            align-content:end;
+            border-radius: 10px;
+            background-color:lightgrey;
+        }
+        main{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Arithemetic Calculator</header>
+    <main>
+        <div class="mainclc">
+           <div class="display" style="margin-left: 10px;margin-top:10px">0</div> 
+           <div class="keys " style="margin-left: 10px;">7</div>
+           <div class="keys eight">8</div>
+           <div class="keys nine">9</div>
+           <div class="keys plus">+</div>
+           <div class="keys four" style="margin-left: 10px;">4</div>
+           <div class="keys five">5</div>
+           <div class="keys six">6</div>
+           <div class="keys minus">-</div>
+           <div class="keys one" style="margin-left: 10px;">1</div>
+           <div class="keys two">2</div>
+           <div class="keys three">3</div>
+           <div class="keys multiply">*</div>
+           <div class="keys erase" style="margin-left: 10px;margin-bottom: 10px;">Ers</div>
+           <div class="keys zero" style="margin-bottom: 10px;">0</div>
+           <div class="keys divide" style="margin-bottom: 10px;">/</div>
+           <div class="keys equal" style="margin-bottom: 10px;">=</div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("click", displayDate);
+    function displayDate() {
+      document.getElementById("display").textContent = this.textContent;
+    }
+    </script>
+</body>
+</html>
